@@ -13,6 +13,14 @@ const horizontalData = [
     {key: '8', image: require("./assets/Pasted Graphic 2.png"), location: "Accra, Ghana", price: "$160.00", label: "Software Engineering", miniLabel: "Facebook", backgroundColor: "blue", textColour: "white", },
 ]
 
+const verticalData = [
+    {id: 1, title: "Jr Executive", salary: "$96,000/y", company: "Burger King", location: "Los Angels, US", icon: require("./assets/BurgerKing.png")},
+    {id: 2, title: "Product Manager", salary: "$84,000/y", company: "Beats", location: "Florida, US", icon: require("./assets/Beats.png")},
+    {id: 3, title: "Software Engineer", salary: "$100,000/y", company: "FaceBook", location: "Washington, US", icon: require("./assets/Pasted Graphic 2.png")},
+    {id: 4, title: "Cyber Security Analyst", salary: "$80,000/y", company: "Google", location: "New York, US", icon: require("./assets/Pasted Graphic 1.png")},
+    {id: 5, title: "Hardware Engineer", salary: "$75,000/y", company: "Apple", location: "Kentucky, US", icon: require("./assets/Pasted Graphic.png")},
+]
+
 export default function Homepage(){
     return(
         <>
@@ -30,10 +38,13 @@ export default function Homepage(){
             </View>
                 <Text style={styles.featuredText}>Featured Jobs</Text>
                 <Text style={styles.seeAll}>See all</Text>
+                <Text style={styles.popularJobs}>Popular Jobs</Text>
+                <Text style={styles.seeAll2}>See all</Text>
         </View>
         <FlatList 
         horizontal = {true}
         data={horizontalData}
+        showsHorizontalScrollIndicator={false}
         renderItem={({item}) =>(
             <FeaturedJobCard
             image={item.image}
@@ -56,7 +67,7 @@ export default function Homepage(){
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#FFFFFF',
+        backgroundColor: '#FAFAFD',
     },
     headName: {
         fontWeight: '700',
@@ -130,4 +141,21 @@ const styles = StyleSheet.create({
         lineHeight: 16.8,
         color: "#95969D",
     },
+    popularJobs:{
+        width: 110,
+        height: 21,
+        top: 270,
+        left: 26,
+        fontWeight: "600",
+        fontSize: 18,
+    },
+    seeAll2:{
+        width: 42,
+        height: 21,
+        top: 255,
+        left: 325,
+        color: "#95969D",
+        fontSize: 14,
+        lineHeight: 20.8,
+    }
 });
