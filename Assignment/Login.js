@@ -1,8 +1,12 @@
 import * as React from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image} from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image, Button} from 'react-native';
 
 
-export default function App(){
+    const Login = ({ navigation }) => {
+        const handleLoginPress = () => {
+        navigation.navigate('Homepage');
+        };
+    
     return(
         <>
         <View style={style.container}>
@@ -13,7 +17,7 @@ export default function App(){
         <View style={style.form}>
             <TextInput style={style.nameInput} placeholder='Name' placeholderTextColor={'#AFB0B6'} textAlign='left'></TextInput>
             <TextInput style={style.emailInput} placeholder='Email' placeholderTextColor={'#AFB0B6'} textAlign='left'></TextInput>
-            <TouchableOpacity style={style.loginButton} >
+            <TouchableOpacity style={style.loginButton} onPress={handleLoginPress}>
                 <Text style={style.buttonText}>Login</Text>
             </TouchableOpacity>
         </View>
@@ -39,6 +43,7 @@ export default function App(){
         </>
     );
 }
+
 
 const style = StyleSheet.create({
     headName:{
@@ -183,4 +188,6 @@ const style = StyleSheet.create({
         fontSize: '14',
         color: '#AFB0B6'
     }
-})
+});
+
+export default Login;
