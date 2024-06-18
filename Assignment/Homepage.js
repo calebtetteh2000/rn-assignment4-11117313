@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, Image, FlatList, TextInput, ScrollView } from 'react-native';
 import FeaturedJobCard from './FeaturedJobCard';
+import PopularJob from './PopularJob';
 
 
 const horizontalData = [
@@ -19,6 +20,11 @@ const verticalData = [
     {id: 3, title: "Software Engineer", salary: "$100,000/y", company: "FaceBook", location: "Washington, US", icon: require("./assets/Pasted Graphic 2.png")},
     {id: 4, title: "Cyber Security Analyst", salary: "$80,000/y", company: "Google", location: "New York, US", icon: require("./assets/Pasted Graphic 1.png")},
     {id: 5, title: "Hardware Engineer", salary: "$75,000/y", company: "Apple", location: "Kentucky, US", icon: require("./assets/Pasted Graphic.png")},
+    {id: 6, title: "Jr Executive", salary: "$96,000/y", company: "Burger King", location: "Los Angels, US", icon: require("./assets/BurgerKing.png")},
+    {id: 7, title: "Product Manager", salary: "$84,000/y", company: "Beats", location: "Florida, US", icon: require("./assets/Beats.png")},
+    {id: 8, title: "Software Engineer", salary: "$100,000/y", company: "FaceBook", location: "Washington, US", icon: require("./assets/Pasted Graphic 2.png")},
+    {id: 9, title: "Cyber Security Analyst", salary: "$80,000/y", company: "Google", location: "New York, US", icon: require("./assets/Pasted Graphic 1.png")},
+    {id: 10, title: "Hardware Engineer", salary: "$75,000/y", company: "Apple", location: "Kentucky, US", icon: require("./assets/Pasted Graphic.png")},
 ]
 
 export default function Homepage(){
@@ -58,6 +64,21 @@ export default function Homepage(){
         )}
         keyExtractor={(item) => item.key}
         contentContainerStyle={{alignItems:'center', paddingLeft: 20,}}
+        />
+        <FlatList
+        vertical = {true}
+        data={verticalData}
+        showsVerticalScrollIndicator={false}
+        renderItem={({item}) => (
+            <PopularJob 
+            location={item.location}
+            price={item.price}
+            title={item.title}
+            salary={item.salary}
+            company={item.company}
+            icon={item.icon}
+            />
+        )}
         />
     </ScrollView>
         </>
