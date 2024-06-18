@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image, Button} from 'react-native';
-
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image} from 'react-native';
 
     const Login = ({ navigation }) => {
         const handleLoginPress = () => {
