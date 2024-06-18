@@ -4,14 +4,14 @@ import PopularJob from './PopularJob';
 
 
 const horizontalData = [
-    {key: '1', image: require("./assets/Pasted Graphic 1.png"), location: "Accra, Ghana", price: "$180.00", label: "Software Engineering", miniLabel: "Google", backgroundColor: "#04284A", textColour: "white", },
-    {key: '2', image: require("./assets/Pasted Graphic 2.png"), location: "Accra, Ghana", price: "$160.00", label: "Software Engineering", miniLabel: "Facebook", backgroundColor: "#5386E4", textColour: "white", },
-    {key: '3', image: require("./assets/Pasted Graphic.png"), location: "Accra, Ghana", price: "$190.00", label: "Software Engineering", miniLabel: "Apple", backgroundColor: "#EA4335", textColour: "white", },
-    {key: '4', image: require("./assets/Pasted Graphic 1.png"), location: "Accra, Ghana", price: "$180.00", label: "Software Engineering", miniLabel: "Google", backgroundColor: "#FBBC05", textColour: "white", },
-    {key: '5', image: require("./assets/Pasted Graphic 2.png"), location: "Accra, Ghana", price: "$160.00", label: "Software Engineering", miniLabel: "Facebook", backgroundColor: "pink", textColour: "white", },
-    {key: '6', image: require("./assets/Pasted Graphic.png"), location: "Accra, Ghana", price: "$190.00", label: "Software Engineering", miniLabel: "Apple", backgroundColor: "lightgreen", textColour: "white", },
-    {key: '7', image: require("./assets/Pasted Graphic 1.png"), location: "Accra, Ghana", price: "$180.00", label: "Software Engineering", miniLabel: "Google", backgroundColor: "black", textColour: "white", },
-    {key: '8', image: require("./assets/Pasted Graphic 2.png"), location: "Accra, Ghana", price: "$160.00", label: "Software Engineering", miniLabel: "Facebook", backgroundColor: "blue", textColour: "white", },
+    {key: '1', image: require("./assets/Pasted Graphic 1.png"), location: "Accra, Ghana", price: "$180.00", label: "Software Engineering", miniLabel: "Google", backgroundColor: "#04284A", background: require("./assets/Background.png"), textColour: "white", },
+    {key: '2', image: require("./assets/Pasted Graphic 2.png"), location: "Accra, Ghana", price: "$160.00", label: "Software Engineering", miniLabel: "Facebook", backgroundColor: "#5386E4", background: require("./assets/Background.png"), textColour: "white", },
+    {key: '3', image: require("./assets/Pasted Graphic.png"), location: "Accra, Ghana", price: "$190.00", label: "Software Engineering", miniLabel: "Apple", backgroundColor: "#EA4335", background: require("./assets/Background.png"), textColour: "white", },
+    {key: '4', image: require("./assets/Pasted Graphic 1.png"), location: "Accra, Ghana", price: "$180.00", label: "Software Engineering", miniLabel: "Google", backgroundColor: "#FBBC05", background: require("./assets/Background.png"), textColour: "white", },
+    {key: '5', image: require("./assets/Pasted Graphic 2.png"), location: "Accra, Ghana", price: "$160.00", label: "Software Engineering", miniLabel: "Facebook", backgroundColor: "pink", background: require("./assets/Background.png"), textColour: "white", },
+    {key: '6', image: require("./assets/Pasted Graphic.png"), location: "Accra, Ghana", price: "$190.00", label: "Software Engineering", miniLabel: "Apple", backgroundColor: "lightgreen", background: require("./assets/Background.png"), textColour: "white", },
+    {key: '7', image: require("./assets/Pasted Graphic 1.png"), location: "Accra, Ghana", price: "$180.00", label: "Software Engineering", miniLabel: "Google", backgroundColor: "black", background: require("./assets/Background.png"), textColour: "white", },
+    {key: '8', image: require("./assets/Pasted Graphic 2.png"), location: "Accra, Ghana", price: "$160.00", label: "Software Engineering", miniLabel: "Facebook", backgroundColor: "#a8c0ff", background: require("./assets/Background.png"), textColour: "white", },
 ]
 
 const verticalData = [
@@ -60,6 +60,7 @@ export default function Homepage(){
             miniLabel={item.miniLabel}
             backgroundColor={item.backgroundColor}
             textColour={item.textColour}
+            background={item.background}
             />
         )}
         keyExtractor={(item) => item.key}

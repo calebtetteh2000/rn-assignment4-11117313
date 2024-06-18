@@ -1,13 +1,14 @@
 import React from 'react'
 import { Image, View, Text, StyleSheet } from 'react-native';
 
-const FeaturedJobCard = ({ image, backgroundColor, label, miniLabel, location, price, textColour}) => {
+const FeaturedJobCard = ({ image, backgroundColor, label, miniLabel, location, price, textColour, background}) => {
   return (
     <>
     <View style={[styles.container2, {backgroundColor: backgroundColor}]}>
         <Image 
         source={image}  
         style={styles.logo} />
+        <Image source={background} style={styles.background}></Image>
         <Text style={[styles.label, {color: textColour}] }>{label}</Text>        
         <Text style={[styles.miniLabel, {color: textColour}]}>{miniLabel}</Text>
         <Text style={[styles.location, {color: textColour}]}>{location}</Text>
@@ -26,6 +27,12 @@ const styles = StyleSheet.create({
       margin: 15,   
       left: -14, 
       marginTop:10,    
+    },
+    background: {
+      position: 'absolute',
+      width: '100%',
+      height: '100%',
+      opacity: 0.06,
     },
   
     label: {
