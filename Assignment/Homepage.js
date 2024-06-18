@@ -47,7 +47,9 @@ export default function Homepage(){
                 <Text style={styles.popularJobs}>Popular Jobs</Text>
                 <Text style={styles.seeAll2}>See all</Text>
         </View>
-        <FlatList 
+        
+    </ScrollView>
+    <FlatList 
         horizontal = {true}
         data={horizontalData}
         showsHorizontalScrollIndicator={false}
@@ -81,7 +83,6 @@ export default function Homepage(){
             />
         )}
         />
-    </ScrollView>
         </>
     );
 }
